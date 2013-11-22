@@ -3,8 +3,8 @@
 <table>
   <thead>
     <tr>
-      <th>Commenter</th>
       <th>Body</th>
+      <th>Post</th>
       <th></th>
       <th></th>
       <th></th>
@@ -14,8 +14,8 @@
   <tbody>
     <% @comments.each do |comment| %>
       <tr>
-        <td><%= comment.commenter %></td>
         <td><%= comment.body %></td>
+        <td><%= comment.post_id %></td>
         <td><%= link_to 'Show', comment %></td>
         <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
         <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
