@@ -1,20 +1,26 @@
-<h1>Listing posts</h1>
+<head>
+<link rel="stylesheet" type="text/css" href="posts.css.scss">
+</head>
+<head>
+<body>
+<img src= "https://fbexternal-a.akamaihd.net/safe_image.php?d=AQADwlK2ntHbKoq_&w=368&h=200&url=http%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fen%2Fthumb%2F7%2F7a%2FCarolina_Panthers_logo_2012.svg%2F720px-Carolina_Panthers_logo_2012.svg.png">
 
-<table>
+<h1>Carolina Panthers Forum</h1>
+<table border ="1">
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <td>Title</td>
+      <td>Body</td>
+      <td></td>
+      <td></td>
+      <td></td>
     </tr>
   </thead>
 
-  <tbody>
+  <tbody class = "T">
     <% @posts.each do |post| %>
       <tr>
-        <td><%= post.title %></td>
+        <td><%= post.title %></a></td>
         <td><%= post.body %></td>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
@@ -23,6 +29,8 @@
     <% end %>
   </tbody>
 </table>
+    </body>
+</head>
 
 <br>
 

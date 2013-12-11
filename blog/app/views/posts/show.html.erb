@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<script src = "show.js.erb"></script>
+
 <p>
   <strong>Title:</strong>
   <%= @post.title %>
@@ -10,7 +12,7 @@
   <%= @post.body %>
 </p>
 
-<h2>Comments</h2>
+<h2 class = "comments">Comments</h2>
 <div id="comments">
     <% @post.comments.each do |comment| %>
     <%= div_for comment do %>
@@ -22,12 +24,15 @@
 <% end %>
 </div>
 
-<%= form_for([@post, Comment.new]) do |f| %>
+<div>
+<%= form_for(([@post, Comment.new]), remote: true) do |f| %>
     <p>
-        <%= f.label :body, "new comment" %><br />
+        <%= f.label :body, "New comment" %><br />
         <%= f.text_area :body %>
     </p>
-    <p><%= f.submit "Add Comment" %></p>
+    <p><%= f.submit "Add Comment"  %></p>
 <% end %>
+    
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
+</div>

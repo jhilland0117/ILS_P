@@ -1,0 +1,7 @@
+
+
+$( '.comment_entry form' ).submit(function(e) {
+    e.preventDefault();
+    var comment = $( 'input', this).val();
+    $('.comments').append('<li>' + comment + '<li>');
+});

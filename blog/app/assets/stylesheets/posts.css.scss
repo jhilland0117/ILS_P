@@ -1,3 +1,46 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+img {
+    width: 50%;
+    height: 200px;
+}
+
+body {
+    background-image:url(http://www.freebiesgallery.com/wp-content/uploads/2012/08/dark-website-backgrounds-10.jpg);
+}
+
+head {
+    background-color: black;
+}
+
+h1 {
+    font-family: serif;
+    font-size: 40px;
+    font-weight: 1000;
+    color: lightgrey;
+}
+
+tbody {
+    border: 1px solid deepskyblue;
+    background-color: aliceblue;
+    font-family: serif;
+}
+
+table {
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+thead:nth-child(1) {
+    background-color: black;
+    color: lightgrey;
+    border: deepskyblue;
+}
+
+tr:nth-child(even) {
+    background-color: deepskyblue;
+}
